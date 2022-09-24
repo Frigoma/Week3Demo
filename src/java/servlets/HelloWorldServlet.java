@@ -28,6 +28,8 @@ public class HelloWorldServlet extends HttpServlet {
         request.setAttribute("lastname", lastname);
         
         if (lastname == null || lastname.equals("") || firstname == null || firstname.equals("")){
+            request.setAttribute("message", "Invalid entry. Please enter both your first and last name.");
+            
             request.setAttribute("firstname", firstname);
             request.setAttribute("lastname", lastname);
             
